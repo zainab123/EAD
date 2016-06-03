@@ -1,0 +1,90 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Main</title>
+    @Html.Partial("PartialPage")
+    <link rel="shortcut icon" href="~/Content/images/49.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+</head>
+
+<body style="font-family:Algerian ;color:white;overflow-x:hidden ;background-image:url('/Content/images/black.jpg');background-repeat:no-repeat;background-size:cover;">
+    <div class="container-fluid">
+
+        @Html.Partial("AdminPartialHeader")
+
+        <h2>List of all products <br /> <br /> </h2>
+
+        <div class="table-responsive">
+            <table class="table" style="background:#5499C7;padding:10px;width:95%;border-radius:10px;margin-left:30px">
+
+                <tr>
+                    <td style="padding-left:10px"><br />&nbsp; ID <br /><br /></td>
+                    <td><br />&nbsp; user_Id <br /><br /></td>
+                    <td><br />&nbsp; category <br /><br /></td>
+                    <td><br />&nbsp; product name <br /><br /></td>
+                    <td><br /> &nbsp; length/foot <br /><br /> </td>
+                    <td><br /> &nbsp; diameter <br /><br /> </td>
+                    <td><br /> &nbsp; shape <br /><br /> </td>
+                    <td><br /> &nbsp; Stock <br /><br /> </td>
+                    <td><br /> &nbsp; T_Price <br /><br /> </td>
+                    <td><br /> &nbsp; price/piece <br /><br /> </td>
+                    <td><br /> &nbsp; images <br /><br /> </td>
+
+
+                </tr>
+
+                <tbody>
+
+                    @foreach (var s in Model)
+                    {
+                        <tr style="border:1px solid black">
+
+                            <td style="padding:10px;padding-left:10px"> @s.pId</td>
+                            <td style="padding:10px"> @s.user_id</td>
+                            <td style="padding:10px"> @s.cname</td>
+                            <td style="padding:10px"> @s.pname</td>
+                            <td style="padding:10px"> @s.length_foot</td>
+                            <td style="padding:10px"> @s.diameter</td>
+                            <td style="padding:10px"> @s.shape</td>
+                            <td style="padding:10px"> @s.stock</td>
+                            <td style="padding:10px"> @s.total_amount</td>
+                            <td style="padding:10px"> @s.pricePerPc</td>
+                            <td style="padding:10px"> @s.images</td>
+
+
+
+                            <td>
+
+                                &nbsp; &nbsp; &nbsp; <a href="/admin/Delete/@s.pId" style="color: black">   Delete </a>
+                                &nbsp; &nbsp; &nbsp; <a href="/admin/Update/@s.pId" style="color:  black">   Update </a>
+                                &nbsp; &nbsp; &nbsp;
+                            </td>
+                        </tr>
+
+
+
+                    }
+
+
+                </tbody>
+            </table>
+        </div>
+        <!---->
+        <br /><br />
+    </div>
+
+
+
+
+
+    <script src="~/js/bootstrap.js" type="text/javascript"></script>
+
+</body>
+</html>

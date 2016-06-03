@@ -1,0 +1,320 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+
+@font-face
+{
+	font-family: 'Muli';
+	src:url(../fonts_muli/Muli-Light.ttf) format('truetype');
+	 
+}
+
+body
+{
+	font-family:'Muli';
+	
+}
+
+#header
+{
+	background-color:#00718f;
+	height:39px;
+	margin-top:-20px;
+	
+}
+
+#about1
+{
+	margin-left:67px;
+	font-size:25px;
+	color:#C0C0D8;
+	margin-top:4px;   
+	
+}
+#presentation
+{
+	position:relative;
+	left:830px;
+	color:#d4d4d4;
+	font-size:19px;
+	
+	
+}
+#img_pdf
+{
+	position:relative;
+	left:840px;
+	top:9px;
+	
+	
+}
+
+#main_body
+{
+	background-color:#ffffff;
+	height:1100px;
+	
+	
+}
+
+
+#Details p
+{
+	color:#00718f;
+	font-size:18px;
+	
+}
+#info h1
+{
+	color:#bbbbbb;
+	
+	font-size:32px;
+	
+	
+}
+#info p
+{
+	color:#9b9b9b;
+	font-size:26px;
+	
+}
+
+#info1 p
+{
+	color:#353535 ;
+	font-size:19px;
+	
+}
+
+
+
+#special_mentions
+{
+	display:none;
+	
+	
+}
+
+
+#team
+{
+	display:none;
+
+}
+#mob_team
+{
+	display:none;
+
+}
+
+
+#Our_Achievements
+{
+	display:none; 
+
+}
+
+a:link
+{ text-decoration:none ;
+}
+
+a:visited
+{
+	text-decoration:none ;
+}
+
+a:hover
+{
+	text-decoration:none ;
+}
+a:active
+{
+	text-decoration:none ;
+}
+
+
+#plan9_img
+{
+	position:absolute ;
+	
+}
+
+#pitb_img
+{
+	position:relative ; 
+	margin-left:270px ; 
+	margin-top:22px;
+	
+}
+#sel
+{
+	position:relative ;
+	margin-left:350px ;
+	
+}
+
+
+#winner
+{
+   position:absolute ;
+
+
+
+}
+
+
+#img1 , #img2 , #img3 , #img4 ,#img5, #img6
+{
+	
+	display:inline-block ;
+
+
+}
+#img2
+{
+	position:relative;
+	top:8px;
+	
+}
+
+#img3
+{
+	position:relative;
+	top:53px;
+	
+}
+
+#img4
+{
+	position:relative ;
+	bottom:2px ;
+	left:8px ;
+}
+
+#img5
+{
+	position:relative ;
+	top:24px ;
+}
+
+#img6
+{
+	position:relative ;
+	top:2px ;
+	
+}
+.desc
+{
+	display:inline-block ;
+	
+	color:gray ;
+}
+
+#desc2
+{
+	position:relative ;
+	bottom:46px ;
+	
+}
+
+#desc3
+{
+   position :relative ;
+   bottom:46px;
+	
+}
+
+#desc6
+{
+	position:relative ;
+	top:25px ;
+	
+}
+
+
+
+ #nav{
+  height:62px;
+  width:100%;
+  margin:0px;
+  background-color:#ef2e2e;
+  text-align:center;
+  line-height:55px;
+  							
+  padding-left:0.3%;
+  padding-right:0.3%;
+  padding-top:4px;
+  padding-bottom:4px;
+  opacity:1;
+  left:0;
+  bottom:0;
+  clear:both;
+  position:fixed;
+				   
+   }
+				   
+ 
+
+ 
+ 
+  
+ #copyright
+ {
+  width:auto;
+  margin-left:5%;
+  float:left;
+}
+
+#copyright p{
+    font-size:14px;
+	color:#898989;
+}
+
+#navbar{
+  width:auto;
+  text-align:center;
+  position:relative;
+}
+#navbar a
+{
+	color:#000000;
+    
+	font-size:16px;
+	
+	
+}
+
+
+.dividerLine
+{
+	margin-left:10px;
+	margin-right:10px;
+	position:relative;
+	bottom:3px;
+	
+}
+
+#fb
+{
+	
+	position:relative;
+	bottom:55px;
+	left:470px;
+	
+}
+#twitter
+{
+	position:relative;
+	bottom:55px;
+	left:485px;
+}
+
+
+
+
+
+
+
+
+
+

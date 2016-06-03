@@ -1,0 +1,89 @@
+﻿
+@{
+    var error = "";
+    if (IsPost)
+    {
+        var password1 = Request["password1"];
+        var password2 = Request["password2"];
+        var name = Request["name"];
+        var email = Request["email"];
+        var password = Request["password"];
+        var address = Request["address"];
+        var phone_no = Request["phone_no"];
+        var role = "customer";
+        var username = Request["username"];
+        <p> @password " " @name " " + " " @username " " + @email + " " +  @address + " " @phone_no + " " + @role </p>
+        if (password1 != password2)
+        {
+            error = "Passwords donot Match ! ";
+        }
+
+        else
+        {
+            Response.Redirect("~/home/addUser");
+        }
+    }
+
+
+}
+
+
+    <!--content-->
+    
+<div class=" container">
+    <div class=" register">
+        <h1>Register</h1>
+        <form action="../home/addUser" method="post">
+            <div class="col-md-6 register-top-grid">
+                <h3>Personal infomation</h3>
+                <div>
+                <strong>Name</strong><br>
+                <input type="Text" id="name" name="name"  placeholder="Enter your name" required />
+                <span id="name1"></span><br>
+                    </div>
+                <strong>Username</strong><br>
+                <input type="Text" id="uname" name="uname"  placeholder="Enter your name" required />
+                <span id="uname1"></span><br>
+                <strong>Email</strong><br>
+                <input type="email" id="email" name="email"  placeholder="Enter your Email" required />
+                <span id="email1"></span><br>
+
+
+                <strong>Address</strong><br>
+                <input type="text" id="address" name="address"  placeholder="Address" required /><br>
+
+
+                <strong>Cell number</strong><br>
+                <input type="text" id="cell_no" name="cellNo"  placeholder="Enter your Cell number">
+                <span id="Cell_number"></span><br>
+
+
+
+               
+               
+                
+
+                
+                
+
+                
+            </div>
+            <div class="col-md-6 register-bottom-grid">
+                <h3>Login information</h3>
+                
+                    <strong>Password</strong><br>
+                    <input type="Password" id="password" name="password"  placeholder="Enter your Password" value="" required />
+                    <span id="password1"></span><br>
+
+                    <strong>Retype Password</strong><br>
+                    <input type="Password" id="re_password" name="password1"  placeholder="ReEnter your Password" value="" required />
+                    <span id="password2" style="color:red"> @error </span><br>
+
+               
+                <button type="submit" class="btn btn-primary btn-block" value="submit" onclick="validate()"> Done </button> <br />
+            </div>
+            <div class="clearfix"> </div>
+        </form>
+    </div>
+</div>
+        

@@ -1,0 +1,115 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Add</title>
+    @Html.Partial("PartialPage")
+
+    <link rel="shortcut icon" href="~/Content/images/49.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+</head>
+<body style="font-family:Algerian ;color:white;overflow-x:hidden ;background-image:url('/Content/images/black.jpg');background-repeat:no-repeat;background-size:cover;">
+    
+
+        @Html.Partial("AdminPartialHeader")
+
+        @{
+
+            if (IsPost)
+            {
+                var cname = Request["cname"];
+                var pname = Request["pname"];
+
+                var shape = Request["shape"];
+                var diameter = Request["diameter"];
+
+                var stock = Request["stock"];
+                var total_amount = Request["total_amount"];
+
+                var length_foot = Request["length_foot"];
+                var pricePerPc = Request["pricePerPc"];
+
+
+                Response.Redirect("~/admin/SaveProductAdmin");
+
+            }
+
+
+        }
+
+
+        <!---->
+        <div class="container">
+
+        </div>
+        <div class="back">
+
+        </div>
+        <!---->
+        <div class="container">
+            <div class="account_grid">
+                <div class=" login-right">
+                    <h3 style=" font-size:40px">Add An Item</h3>
+                    <br /><br />
+
+                    @using (Html.BeginForm("SaveProductAdmin", "admin", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                    {
+
+                        <span style=" font-size:20px">Product Category</span>
+    <input type="text" name="cname" class="form-control" style="width:30%" placeholder="Enter Product Category" required />
+
+                        <br />
+
+    <span style=" font-size:20px">Product Name</span>
+    <input type="text" name="pname" class="form-control" style="width:30%" placeholder="Enter Product Name" required />
+
+                        <br />
+
+    <span style=" font-size:20px">Product Price</span>
+    <input type="text" name="pricePerPc" class="form-control" style="width:30%"  placeholder="Enter Product Price" required />
+
+                        <br />
+
+    <span style=" font-size:20px">Stock</span>
+    <input type="text" name="stock" class="form-control" style="width:30%" placeholder="Enter Product Stock" required />
+
+                        <br />
+
+    <span style=" font-size:20px">Total Stock Amount</span>
+    <input type="text" name="total_amount" class="form-control" style="width:30%" placeholder="Enter Total Stock Amount" required />
+
+                        <br />
+
+    <span style=" font-size:20px">Length per Piece</span>
+    <input type="text" name="length_foot" class="form-control" style="width:30%" placeholder="Enter Foot " required />
+
+                        <br />
+
+    <span style=" font-size:20px">Diameter</span>
+    <input type="text" name="diameter" class="form-control" style="width:30%" placeholder="Enter Product Diameter" required />
+                        <br />
+
+    <span style=" font-size:20px">Shape</span>
+    <input type="text" name="shape" class="form-control" style="width:30%" placeholder="Enter Product Shape" required />
+                        <br />
+
+                        <strong>Upload Image:</strong> <br /> <br />
+                        <input type="file" name="file" /><br />
+
+
+    <button type="submit" class="btn btn-primary btn-block" style="width:30%" value=""> Done </button> <br />
+
+                    }
+
+                </div>
+
+                <script src="~/js/bootstrap.js" type="text/javascript"></script>
+</body>
+</html>

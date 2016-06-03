@@ -1,0 +1,99 @@
+﻿@{
+     Layout = null;
+}
+
+
+@model ead_project.Models.product
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Update</title>
+    <link rel="shortcut icon" href="~/Content/images/49.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    @Html.Partial("PartialPage")
+
+    <style>
+        a {
+            color: white;
+        }
+    </style>
+
+
+</head>
+<body style="font-family:Algerian ;color:white;overflow-x:hidden ;background-image:url('/Content/images/black.jpg');background-repeat:no-repeat;background-size:cover;">
+    <div class="container-fluid">
+
+        @Html.Partial("AdminPartialHeader")
+        <br />
+        <div class="container">
+            <div class="account_grid">
+                <div class=" login-right">
+                    <br />  <h3 style=" font-size:40px"> Update Product </h3> <br />
+
+                    <form action="/admin/EditOK/@Model.pId" method="POST">
+
+
+                        <span style=" font-size:20px">Product Category</span>
+                        <input type="text" class="form-control" name="cname" style="width:30%" placeholder="Enter Product Name" value="@Model.cname" required />
+
+                        <br />
+
+                        <span style=" font-size:20px">Product Name</span>
+                        <input type="text" name="pname" class="form-control" style="width:30%" placeholder="Enter Product Name" value="@Model.pname" required />
+
+                        <br />
+
+                        <span style=" font-size:20px">Product Price</span>
+                        <input type="text" name="pricePerPc" class="form-control" style="width:30%" placeholder="Enter Product Name" value="@Model.pricePerPc" required />
+
+                        <br />
+
+                        <span style=" font-size:20px">Stock</span>
+                        <input type="text" name="stock" class="form-control" style="width:30%" placeholder="Enter Product Name" value="@Model.stock" required />
+
+                        <br />
+
+                        <span style=" font-size:20px">Total Stock Amount</span>
+                        <input type="text" name="total_amount" class="form-control" style="width:30%" placeholder="Enter Product Name" value="@Model.total_amount" required />
+
+                        <br />
+
+                        <span style=" font-size:20px">Length per Piece</span>
+                        <input type="text" name="length_foot" class="form-control" style="width:30%" placeholder="Enter Product Name" value="@Model.length_foot" required />
+
+                        <br />
+
+                        <span style=" font-size:20px">Diameter</span>
+                        <input type="text" name="diameter" class="form-control" style="width:30%" placeholder="Enter Product Name" value="@Model.diameter" required />
+                        <br />
+
+                        <span style=" font-size:20px">Shape</span>
+                        <input type="text" name="shape" class="form-control" style="width:30%" placeholder="Enter Product Name" value="@Model.shape" required />
+                        <br />
+
+                        @*<strong>Upload Image:</strong> <br /> <br />
+                        <input type="file" name="file" value="@Model.images" /><br />*@
+
+
+                        <br />
+                        <button type="submit" style="width:30%" class="btn btn-primary btn-block" value="" />DONE  <br />
+
+                    </form>
+
+                    <div class="col-md-5"> </div>
+
+                </div>
+
+                <div class="col-md-12"> <br /> <br /> </div>
+
+            </div>
+        </div>
+
+    </div>
+    <script src="~/js/bootstrap.js" type="text/javascript"></script>
+
+</body>
+</html>

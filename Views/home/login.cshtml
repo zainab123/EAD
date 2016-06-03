@@ -1,0 +1,49 @@
+﻿<!--header-->
+  @{
+
+    if (IsPost)
+    {
+       
+
+        Response.Redirect("~/home/login");
+ 
+
+    }
+
+
+}  
+
+<body style="background-color: #cafac2"></body>
+    <!--content-->
+    <div class="container">
+        <h6 class="women1"><a href="../../home/index">Home</a> <i> </i> Login </h6>
+        <div class="account">
+            <h1>Account</h1>
+            <div class="account-pass">
+                <div class="col-md-8 account-top">
+                    <form action="../home/signin" method="post">
+                        <div>
+                            <span>Username</span>
+                            <input type="text" name="username" placeholder="Enter your name" required />
+                            <span id="name1"></span><br>
+                        </div>
+                        <div>
+                            <span>Password</span>
+                            <input type="password" name="password" placeholder="Enter your Password" value="" required />
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-block" value="submit" onclick="validate()"> LogIn </button> <br />
+                    </form>
+                </div>
+                <div class="col-md-4 left-account ">
+                    
+                   
+                    <div class="clearfix"> </div>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!--//
